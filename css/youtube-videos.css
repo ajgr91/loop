@@ -1,0 +1,52 @@
+.cvpresen {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 60;
+	display: none;
+}
+
+.innervbck {
+	position: absolute;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #000000;
+	opacity: 0.8;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=#{0.8*100})";
+	position: fixed;
+}
+
+.innervpresen {
+	position: fixed;
+	top: 60px;
+	margin-top: 0;
+	left: 0;
+	margin-left: 0;
+
+	position: relative;
+	padding-bottom: 56.25%;
+	height: 0;
+}
+
+.innervpresen iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.cvm {
+	position: fixed;
+	top: 10px;
+	left: 10px;	
+}
+
+.cvm span {
+	display: block;
+	color: white;
+	padding-bottom: 2px;
+	border-bottom: 1px solid white;
+}

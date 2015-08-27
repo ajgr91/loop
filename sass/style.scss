@@ -1,0 +1,34 @@
+
+/*--------------------------------- Archivos del config -----------------------------------*/
+@import 'config/functions';
+@import 'config/variables';
+
+/*---------------------------------- Archivos del base ------------------------------------*/
+@import 'base/reset';
+@import 'base/sprite';
+@import 'base/typography';
+@import 'base/textformat';
+@import 'base/general';
+
+/*------------------------------------------ UI -------------------------------------------*/
+@import 'ui/buttons';
+@import 'ui/forms';
+@import 'ui/grid';
+@import 'ui/text';
+
+/*--------------------------------------- Modules -----------------------------------------*/
+@import 'modules/header';
+@import 'modules/footer';
+@import 'modules/general';
+@import 'modules/page_home';
+@import 'modules/page_my_routine';
+@import 'modules/page_new_routine';
+@import 'modules/page_stats';
+
+/*------------------------------------- Breakpoints ---------------------------------------*/
+@import 'mediaqueries/mediaquery_480px';
+@import 'mediaqueries/mediaquery_768px';
+@import 'mediaqueries/mediaquery_1024px';
+@import 'mediaqueries/mediaquery_1600px';
+
+

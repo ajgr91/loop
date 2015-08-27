@@ -1,0 +1,9 @@
+.grid-sizer{
+  width: 50%;
+}
+.md1{
+  width: calc(100% - #{2*$margin-grid});
+}
+.md2{
+  width: calc(50% - #{2*$margin-grid});
+}

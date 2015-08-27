@@ -1,0 +1,315 @@
+header {
+	.wrapper-nav{
+		background-color: $blanco;
+		padding: 5px 5px;
+		height: 50px;
+		width: 100%;
+		position: fixed;
+		top: 0;
+		z-index: 50;
+	}
+	nav{
+		overflow: hidden;
+	}
+	.logo {
+		  position: absolute;
+		  width: 65px;
+		  height: 30px;
+		  left: 0;
+		  right: 0;
+		  margin: auto;
+		  top: 10px;
+		img {
+			max-height: 100%;
+		}
+	}
+	.menu-left {
+		top: 0px;
+		height: 100%;
+		background-color: $primarycolor;
+		z-index: 20;
+		width: $width-push;
+
+  			.close-icon{
+			      position: absolute;
+			      color: #FFF;
+			      left: 25px;
+			      top: 8px;
+			      cursor: pointer;
+			      @include trs(all 0.250s ease-in-out);
+			      width: 35px;
+			      height: 35px;
+
+			      span{
+			        position: absolute;
+			        height: 38px;
+			        width: 4px;
+			        background-color: #FFF;
+			        @include trs(all 0.250s ease-in-out);
+			      }
+			      .icon-top-line {
+			        top: 0px;
+			        right: 15px;
+			        @include trf(rotate(45deg));
+			      }
+			      .icon-bottom-line {
+			        top: 0px;
+			        left: 15px;
+			        @include trf(rotate(-45deg));
+			      }
+			      &:hover{
+			        span {
+			          background-color: #DDD;
+			        }
+			      }
+    		}
+  		
+
+		.menu-list{
+			margin-top: 100px;
+			.menu-list-item {
+				text-transform: uppercase;
+				background-color: $primarycolor;
+				position: relative;
+
+				a {
+					color: #FFF;
+					@include font($style, $os_light, 16, $family);
+					padding: 15px 25px;
+					display: block;
+					line-height: 150%;
+					padding: 5px 75px 5px 25px;
+					&:after {
+					  content: "";
+					  display: block;
+					  border-bottom: 2px solid #FFF;
+					  margin-top: 0px;
+					  width: 0px;
+					  @include trs(all 0.250s ease-in-out);
+					}
+					&:hover{
+						&:after{
+						width: 100%;
+					}
+					}
+
+				}
+				i {
+					position: absolute;
+					right: 25px;
+					top: 20px;
+				}
+			}
+		}
+	}
+	.menu-right {
+		top: 0px;
+		height: 100%;
+		background-color: $primarycolor;
+		z-index: 20;
+		width: $width-push;
+
+  		.close-icon{
+			      position: absolute;
+			      color: #FFF;
+			      left: 25px;
+			      top: 8px;
+			      cursor: pointer;
+			      @include trs(all 0.250s ease-in-out);
+			      width: 35px;
+			      height: 35px;
+
+			      span{
+			        position: absolute;
+			        height: 38px;
+			        width: 4px;
+			        background-color: #FFF;
+			        @include trs(all 0.250s ease-in-out);
+			      }
+			      .icon-top-line {
+			        top: 0px;
+			        right: 15px;
+			        @include trf(rotate(45deg));
+			      }
+			      .icon-bottom-line {
+			        top: 0px;
+			        left: 15px;
+			        @include trf(rotate(-45deg));
+			      }
+			      &:hover{
+			        span {
+			          background-color: #DDD;
+			        }
+			      }
+    	}
+  		
+	    .notifications{
+	    	position: absolute;
+	    	top: 100px;
+	    	left: 0px;
+	    	padding: 5px 30px;
+	    	display: none;
+	    	width: 100%;
+	    	&.active{
+	    		display: block;
+	    	}
+	    	h2{
+	    		@include font($style, $os_medium, 16, $family);
+	    		color: #FFF;
+	    		text-transform: uppercase;
+	    		padding-bottom: 20px;
+	    	}
+			.notification-list{
+				.notification-list-item {
+					background-color: $primarycolor;
+					position: relative;
+					margin-bottom: 10px;
+					.notification-item{
+						color: #DDD;
+						@include font($style, $os_light, 14, $family);
+						display: block;
+						strong{
+							color: #FFF;
+							font-weight: 600;
+						}
+					}
+					.notification-date{
+						color: #DDD;
+						@include font($style, $os_medium, 12, $family);
+						display: block;
+						strong{
+							color: #FFF;
+							font-weight: 500;
+						}
+					}
+				}
+			}
+		}
+		.widgets{
+	    	position: absolute;
+	    	top: 100px;
+	    	left: 0px;
+	    	padding: 5px 30px;
+	    	display: none;
+	    	width: 100%;
+	    	&.active{
+	    		display: block;
+	    	}
+	    	h2{
+	    		@include font($style, $os_medium, 16, $family);
+	    		color: #FFF;
+	    		text-transform: uppercase;
+	    		padding-bottom: 20px;
+	    	}
+			.widget-list{
+				.widget-list-item {
+					background-color: $primarycolor;
+					position: relative;
+					margin-bottom: 8px;
+					overflow: hidden;
+					cursor: pointer;
+					.add-button{
+						font: normal $os_bold rem(25) $primarytxt;
+						color: #FFF;
+						font-weight: 500;
+						width: 20%;
+						border: 2px #FFF solid;
+					    float: left;
+						height: 50px;
+						text-align: center;
+						background: transparent;
+						@include flexbox();
+						@include flex-align(center);
+				   		@include flex-direction(column);
+				   		@include trs(all 0.250s ease-in-out);
+					}
+					.title{
+						@include font($style, $os_bold, 13, $family);
+	    				color: $primarycolor;
+	    				background-color: $blanco;
+	    				text-transform: uppercase;
+						text-align: center;
+						width: 80%;
+						float: left;
+						padding: 10px 5px;
+						height: 50px;
+						display: block;
+						@include flexbox();
+				    	@include flex-align(center);
+				    	@include flex-direction(column);
+					}
+					&:hover{
+						.add-button{
+							color: $primarycolor;
+							background-color: $blanco;
+						}
+					}
+				}
+			}
+		}
+	}
+	.user-info {
+		position: relative;
+		float: right;
+		z-index: 10;
+		margin-top: 10px;
+   		margin-right: 10px;
+		.user-notifications {
+			background-color: $secondarycolor;
+			padding: 2px 8px;
+			border-radius: 5px;
+			position: relative;
+			text-align: center;
+			margin-right: 10px;
+			@include font($style, $os_medium, 16, $family);
+			@include trs(all 0.250s ease-in-out);
+			&:after {
+				content: "";
+				display: block;
+				border-right: 5px solid $secondarycolor;
+				border-left: 5px inset transparent;
+				border-top: 5px solid $secondarycolor;
+				border-bottom: 5px inset transparent;
+				position: absolute;
+				top: 20px;
+  				right: 4px;
+				z-index: 0;
+				@include trs(all 0.250s ease-in-out);
+			}
+			&:hover, &.clicked{
+				background-color: #000;
+				&:after{
+					border-right: 5px solid #000;
+					border-left: 5px inset transparent;
+					border-top: 5px solid #000;
+					border-bottom: 5px inset transparent;
+				}
+			}
+		}
+		.user-name {
+			color: $gris;
+			padding-right: 20px;
+			@include font($style, $os_light, 15, $family);
+			i {
+				  position: absolute;
+				 top: 4px;
+				  right: 0px;
+				  font-size: 12px;
+			}
+		}
+	}
+	.menu-box {
+		float: left;
+		position: relative;
+		z-index: 10;
+		height: 40px;
+		width: 50px;
+		@include trs(all 0.250s ease-in-out);
+		&.clicked {
+		  @include trf(rotate(90deg));
+		}
+	}
+	.menu-box .shortcut-menu .icon-menu {
+		@include burguer(30, 3, 3, $primarycolor);
+	}
+}

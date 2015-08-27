@@ -1,0 +1,111 @@
+/* Galeria de imagenes
+********************************************************************************/
+.gallery {
+    display: none;
+}
+.zoom_overlay {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    background-color: #fff;
+    display: none;
+    z-index: 8888;
+}
+
+.zoom_content {
+    position: relative;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+}
+
+.zoom_overlay.open {
+    display: block;
+}
+
+.displaynone {
+    display: none !important;
+}
+
+.zoom_prev {
+    background: url('../img/icons/flecha_izq.png') no-repeat;
+    width: 24px;
+    height: 44px;
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    margin-top: -22px;
+    cursor: pointer;
+    z-index: 50;
+}
+
+.zoom_next {
+    background: url('../img/icons/flecha_der.png') no-repeat;
+    width: 24px;
+    height: 44px;
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    margin-top: -22px;
+    cursor: pointer;
+    z-index: 50;
+}
+
+.zoom_close {
+    background: url('../img/icons/ico_cerrar.png') no-repeat;
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    top: 50px;
+    right: 10px;
+    margin-top: -22px;
+    z-index: 99999;
+    cursor: pointer
+}
+
+.zoom_view {
+    text-align: center;
+    height: 100%;
+}
+
+.zoom_view img {
+    height: auto;
+    width: auto;
+    position: absolute;
+    left: 50%;
+    top: 50%;    
+}
+
+.zoom_next, .zoom_prev {
+    display: none !important;
+}
+
+
+/* 980 */
+
+@media all and (min-width: 980) {
+    .zoom_view img {
+        height: auto;
+        width: auto;
+    }
+}
+
+/* 1200 */
+
+@media all and (min-width: 1200px) {
+    
+    
+    .zoom_next, .zoom_prev {
+        display: block !important;
+    }
+
+    .zoom_view img {
+        height: auto;
+        width: auto;
+    }
+}

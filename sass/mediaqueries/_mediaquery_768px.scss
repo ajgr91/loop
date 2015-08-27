@@ -1,0 +1,11 @@
+/* MEDIAQUERY 768PX
+*********************************************************************/
+@media all and (min-width: 768px) {
+
+	@import "768/header";
+	@import "768/footer";
+	@import "768/general";
+	@import "768/page_home";
+	@import "768/page_my_routine";	
+	@import "768/page_new_routine";	
+}

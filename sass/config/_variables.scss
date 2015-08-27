@@ -1,0 +1,51 @@
+/* Fuentes */
+/*$lato							: 'Lato', sans-serif;*/
+$opensans					: 'Open Sans', sans-serif;
+$futura					: 'Futura STD', sans-serif;
+$roboto					: 'Roboto', sans-serif;
+
+//Rutas
+$rutaTema	: 'http://localhost/festiworld/';
+
+// Htc paths
+$pie: url(#{$rutaTema}js/lib/pie.htc);
+$backgroundsize: url(#{$rutaTema}js/lib/backgroundsize.htc);
+
+/*--------------------------------------------------------------------*/
+/*  Estilos de caracter 
+/*--------------------------------------------------------------------*/
+
+/* Colores */
+$transparent			: transparent;
+$blanco					: #ffffff;
+$negro					: #000000;
+$gris					: #333333;
+
+/* Font weights */
+$os_thin				: 200;
+$os_light				: 300;
+$os_regular			    : 400;
+$os_medium				: 500;
+$os_bold			    : 600;
+$os_black			    : 700;
+
+/* Parametros de inicialización */
+$base_font_size			: 16;
+$primarytxt				: $roboto;
+$primarycolor			: #121212;
+$secondarycolor			: #F04B48;
+$primaryfont			: normal $os_light 15px $primarytxt;
+$primaryfont			: normal $os_light rem($base_font_size) $primarytxt;
+
+
+/* Font */
+$style  				: normal;  
+$weight 				: $os_light; 
+$size 					: $base_font_size; 
+$family  				: $roboto;
+
+/* GRID */
+$margin-grid			: 2.5px;
+
+/* Contenedores y desplazamiento */
+$width-push				: 300px;

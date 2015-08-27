@@ -1,0 +1,439 @@
+body {
+    font-family: 'Roboto', sans-serif;
+}
+header {
+    position: relative;
+}
+footer {
+    background-color: rgb(255, 255, 255);
+    height: 5px;
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+}
+a {
+    position: relative;
+    color: #FFF;
+    text-decoration: none;
+}
+.a-white {
+    position: relative;
+    color: #FFF;
+    text-decoration: none;
+}
+.a-white:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #FFF;
+    visibility: hidden;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transition: all 0.3s ease-in-out 0s;
+    transition: all 0.3s ease-in-out 0s;
+}
+.a-black {
+    position: relative;
+    color: #111111;
+    text-decoration: none;
+}
+.a-black:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #111111;
+    visibility: hidden;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transition: all 0.3s ease-in-out 0s;
+    transition: all 0.3s ease-in-out 0s;
+}
+a:hover:before {
+    visibility: visible;
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+}
+input[type="text"] {
+    background-color: transparent;
+    border-bottom: solid 1px #111111;
+    font-size: 12px;
+    margin-bottom: 5px;
+    padding: 4px 0px;
+}
+::-webkit-input-placeholder {
+
+    /* WebKit browsers */
+    color: #111111;
+}
+:-moz-placeholder {
+
+    /* Mozilla Firefox 4 to 18 */
+    color: #111111;
+    opacity: 1;
+}
+::-moz-placeholder {
+
+    /* Mozilla Firefox 19+ */
+    color: #111111;
+    opacity: 1;
+}
+:-ms-input-placeholder {
+
+    /* Internet Explorer 10+ */
+    color: #111111;
+}
+.lfloat {
+    float: left;
+}
+.rfloat {
+    float: right;
+}
+.cfloat {
+    overflow: hidden;
+    clear: both;
+}
+#page {
+    background-image: url(../img/crossfit.png);
+    background-position: top center;
+    -webkit-background-size: cover;
+    background-size: cover;
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    -webkit-transition: color 0.2s linear, background-color 0.2s linear;
+    transition: color 0.2s linear, background-color 0.2s linear;
+    display: block;
+    position: relative;
+    width: 100%;
+}
+.content {
+    position: relative;
+    height: 100%;
+    overflow: hidden;
+    color: #FFF;
+}
+.primary-blocks {
+    height: 100%;
+    position: relative;
+}
+.logo {
+    width: 115px;
+    position: absolute;
+    top: 15px;
+    left: 0;
+}
+.align-content {
+    width: 1024px;
+    margin: 0 auto;
+}
+.titles {
+    position: absolute;
+    top: 150px;
+    right: 50px;
+}
+.titles h1 {
+    font-size: 60px;
+    font-weight: 600;
+}
+.titles h2 {
+    font-size: 32px;
+    font-weight: 600;
+}
+.titles h3 {
+    font-size: 20px;
+    font-weight: 400;
+}
+.btn-white {
+    font-family: 'Roboto', sans-serif !important;
+    font-weight: 600 !important;
+    border: 3px solid #FFF !important;
+    text-align: center;
+    color: #FFF;
+    background-color: transparent;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+.btn-white:hover {
+    color: #111111;
+    background-color: #FFF;
+}
+.btn-black {
+    font-family: 'Roboto', sans-serif !important;
+    font-weight: 600 !important;
+    border: 3px solid #111111 !important;
+    text-align: center;
+    color: #111111;
+    background-color: transparent;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+.btn-black:hover {
+    color: #FFF;
+    background-color: #111111;
+}
+.register-login-wrapper {
+    position: absolute;
+    top: 350px;
+    right: 162px;
+}
+.register-login-wrapper .register {
+    display: block;
+    padding: 5px 100px;
+    font-size: 32px !important;
+    cursor: pointer;
+}
+.register-login-wrapper span {
+    margin-top: 10px;
+    display: block;
+    font-size: 16px;
+    font-weight: 400;
+}
+.register-login-wrapper .login {
+    font-weight: 600;
+}
+a.close-icon .line {
+    display: block;
+    background: #000;
+    height: 1px;
+    width: 33px;
+}
+a.close-icon .line:first-child {
+    -ms-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    margin-top: 17px !important;
+    margin-left: 0px !important;
+}
+a.close-icon .line:last-child {
+    -ms-transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    margin-top: -1px !important;
+    margin-left: 0px !important;
+}
+.login-wrapper {
+    position: absolute;
+    left: 0;
+    bottom: 0px;
+    height: 0px;
+    width: 100%;
+    background: white;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+#loginForm {
+  position: relative;
+}
+#loginForm input[type="submit"] {
+    padding: 5px 100px;
+    font-size: 20px !important;
+    width: 325px;
+    margin-top: 15px;
+    cursor: pointer;
+    float: right;
+}
+#loginForm input[type="text"] {
+    padding: 5px 5px;
+    font-size: 14px !important;
+    width: 100%;
+}
+#loginForm h1 {
+  background-color: #111111;
+  font-size: 34px;
+  font-weight: 500;
+  padding: 10px 30px;
+  float: left;
+}
+#loginForm span:last-child {
+    color: #111111;
+    margin-top: 10px;
+    display: block;
+    font-size: 14px;
+    text-align: right;
+  margin-right: 50px;
+}
+#loginForm span .recordar {
+    color: #111111;
+    margin-top: 10px;
+    font-weight: 600;
+}
+a.close-icon {
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    display: block;
+    /*background-color: #111111;*/
+    cursor: pointer;
+}
+.login-wrapper a.close-icon {
+    right: 0px;
+    top: 0px;
+}
+.register-wrapper {
+    position: absolute;
+    left: 0;
+    bottom: 0px;
+    height: 0px;
+    width: 100%;
+    background: white;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+.register-wrapper form{
+   -webkit-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    -ms-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+           opacity: 0.;
+   filter: alpha(opacity=0);       /* IE8 and lower */
+       display: none;
+}
+.register-wrapper form.active{
+    opacity: 1.;
+   filter: alpha(opacity=1);       /* IE8 and lower */
+      display: block;
+}
+#registerFormStep1 {
+  position: relative;
+}
+#registerFormStep1 button {
+    padding: 5px 100px;
+    font-size: 20px !important;
+    width: 325px;
+    margin-top: 30px;
+    float: left;
+    cursor: pointer;
+}
+#registerFormStep1 input[type="text"] {
+    padding: 5px 5px;
+    font-size: 14px !important;
+    width: 48%;
+}
+#registerFormStep1 .title-form h1, #registerFormStep2 .title-form h1 {
+  background-color: #111111;
+  font-size: 34px;
+  font-weight: 500;
+  padding: 10px 30px;
+  float: left;
+}
+#registerFormStep1 .subtitle-form h2, #registerFormStep2 .subtitle-form h2 {
+    background-color: transparent;
+    font-size: 18px;
+    font-weight: 600;
+    float: left;
+    margin-bottom: 20px;
+    color: #111111;
+}
+#registerFormStep1 span:last-child {
+    color: #111111;
+    margin-top: 10px;
+    display: block;
+    font-size: 14px;
+}
+#registerFormStep1 span .condiciones {
+    color: #111111;
+    margin-top: 10px;
+    font-weight: 600;
+}
+.register-wrapper a.close-icon {
+    right: 0px;
+    top: 0px;
+}
+.title-form, .subtitle-form {
+    overflow: hidden;
+    width: 100%;
+}
+.title-form {
+margin-left: -30px;
+  margin-bottom: 40px;
+  margin-top: 40px;
+}
+.register-pagination {
+  text-align: center;
+  margin-top: 35px;
+}
+.register-page {
+    background: transparent;
+    width: 10px;
+    height: 10px;
+    border-radius: 10px;
+    display: inline-block;
+    border: 1px solid #111111;/*cursor: pointer;*/
+    -webkit-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    -ms-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+}
+.register-page.active {
+    background: #111111;
+}
+#registerFormStep2 {
+  position: relative;
+}
+#registerFormStep2 button {
+    padding: 5px 100px;
+    font-size: 20px !important;
+    width: 325px;
+    margin-top: 30px;
+    float: right;
+        cursor: pointer;
+}
+#registerFormStep2 input[type="text"] {
+    padding: 5px 5px;
+    font-size: 14px !important;
+    width: 48%;
+}
+#registerFormStep2 span:last-child {
+    color: #111111;
+    margin-top: 10px;
+    display: block;
+    font-size: 14px;
+}
+#registerFormStep2 span .condiciones {
+    color: #111111;
+    margin-top: 10px;
+    font-weight: 600;
+}
+#registerFormStep2 .subir-imagen {
+    border: 4px solid #fff;
+    width: 50px;
+    height: 50px;
+    border-radius: 35px;
+    display: block;
+    position: absolute;
+    top: -5px;
+    right: 10px;
+    background: #AB2830 url('../img/subir-imagen.png') no-repeat center center;
+        cursor: pointer;
+}
+#registerFormStep2 .user-image {
+    width: 20%;
+    position: relative;
+    margin-right: 5%;
+      margin-top: 10px;
+}
+#registerFormStep2 img {
+    margin: 0 auto;
+    display: block;
+}
+#registerFormStep2 .user-data {
+    width: 75%;
+}

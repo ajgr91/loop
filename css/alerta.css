@@ -1,0 +1,48 @@
+.js-alerta {
+  position: fixed;
+  z-index: 100;
+  display: none;
+}
+
+/* Alertas */
+.wrn-main-cover {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  background-color: rgba(255, 255, 255, 0.8);
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#CCFFFFFF,endColorstr=#CCFFFFFF)";
+  zoom: 1;
+  z-index: 100;
+  overflow: hidden;
+  display: table;
+}
+
+.wrn-win-outer {
+  display: table-cell;
+  background-color: transparent;
+  vertical-align: middle;
+  position: initial;
+  z-index: 101;
+}
+
+.wrn-win-inner {
+  margin: 10px;
+  padding: 30px;
+  position: relative;
+  padding-bottom: 100px;
+  background-color: white;
+  border: 1px solid #0075c6;
+}
+.wrn-win-inner .alerta-foot {
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+}
+
+.alerta-txt {
+  color: black;
+  font: normal 400 1rem "Open Sans", sans-serif;
+  font-family: "Open Sans", sans-serif;
+  padding-top: 10px;
+}

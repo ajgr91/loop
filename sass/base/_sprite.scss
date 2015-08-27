@@ -1,0 +1,27 @@
+/* SPRITES
+*******************************************************************************/
+.sprite {
+	/*overflow: hidden;*/
+	background-image: url(../img/sprite.png);
+	/*font-size: 0;*/
+	color: $transparent;
+}
+
+
+
+@media only screen and (-webkit-min-device-pixel-ratio : 2),
+only screen and (min-device-pixel-ratio : 2) {
+
+	.sprite {
+		background-image: url(../img/sprite@2x.png);
+		background-size: 800px 600px;
+	}
+}
+
+@media all and (min-width: 1200px) {
+	
+}
+
+@media all and (min-width: 1400px) {
+	
+}

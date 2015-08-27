@@ -1,0 +1,257 @@
+body {
+	font-size: 16px;
+	font-family: $primarytxt;
+	font: $primaryfont;
+	color: $primarycolor;
+	background-color: #FFF;
+	position: relative;
+	overflow-x: hidden;
+}
+a {
+	color: #FFF;
+	text-decoration: none;
+	font: $primaryfont;
+}
+.vpc {
+	display: none;
+}
+.oyh {
+	overflow-y: hidden;
+}
+
+/* Estilos de párrafo */
+.tac {
+	text-align: center;
+}
+.tal {
+	text-align: left;
+}
+.tar {
+	text-align: right;
+}
+
+/* Fusion de large imágenes */
+.flash {
+	opacity: 0;
+	-webkit-transition: opacity 0.5s ease, height 0.5s ease-out;
+	-moz-transition: opacity 0.5s ease, height 0.5s ease-out;
+	-o-transition: opacity 0.5s ease, height 0.5s ease-out;
+	transition: opacity 0.5s ease, height 0.5s ease-out;
+}
+.hide {
+	opacity: 0;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+	display: none;
+}
+
+/* Contenido general de las páginas */
+.prim {
+	min-height: 100%;
+	position: relative;
+	height: 100%;
+}
+.wrap, .main {
+	height: 100%;
+}
+.ex-link {
+	text-transform: uppercase;
+	color: $blanco;
+	text-decoration: none;
+	border-bottom: 1px solid $blanco;
+	padding-bottom: 5px;
+}
+.cta {
+	text-decoration: none;
+}
+.content {
+	background-color: $blanco;
+}
+.margen {
+	padding: 10px;
+	box-sizing: border-box;
+	overflow: hidden;
+}
+.bouncing {
+	-webkit-animation: bouncing 3s infinite 2s;
+	animation: bouncing 3s infinite 2s;
+}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes bouncing {
+	0% {
+		bottom: 40px;
+	}
+	25% {
+		bottom: 60px;
+	}
+	50% {
+		bottom: 40px;
+	}
+	75% {
+		bottom: 60px;
+	}
+	100% {
+		bottom: 40px;
+	}
+}
+@keyframes bouncing {
+	0% {
+		bottom: 40px;
+	}
+	25% {
+		bottom: 60px;
+	}
+	50% {
+		bottom: 40px;
+	}
+	75% {
+		bottom: 60px;
+	}
+	100% {
+		bottom: 40px;
+	}
+}
+.swinging {
+	-webkit-animation: swinging 3s infinite 0s;
+	animation: swinging 3s infinite 0s;
+}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes swinging {
+	0% {
+		right: 0px;
+	}
+	25% {
+		right: 10px;
+	}
+	50% {
+		bottom: 0px;
+	}
+	75% {
+		bottom: 10px;
+	}
+	100% {
+		bottom: 0px;
+	}
+}
+@keyframes swinging {
+	0% {
+		right: 0px;
+	}
+	25% {
+		right: 10px;
+	}
+	50% {
+		bottom: 0px;
+	}
+	75% {
+		bottom: 10px;
+	}
+	100% {
+		bottom: 0px;
+	}
+}
+.bdblocked {
+	overflow: hidden;
+}
+input[type="submit"], button, a {
+	cursor: pointer;
+}
+.top {
+	top: 0;
+}
+.left {
+	left: 0;
+}
+.bottom {
+	bottom: 0;
+}
+.right {
+	right: 0;
+}
+.page {    
+	overflow: hidden;
+	padding: 10px;
+	margin: 0 auto;
+	padding-top: 63px;
+}
+.btn-primary {
+	text-transform: uppercase;
+	@include font($style, $os_medium, 13, $family);
+	padding: 5px 10px;
+	cursor: pointer;
+	color: #FFF;
+	background-color: $secondarycolor;
+	@include trs(0.250s);
+
+	&:hover {
+		color: #FFF;
+		background-color: $primarycolor;
+	}
+}
+.btn-secondary {
+	text-transform: uppercase;
+	@include font($style, $os_medium, 13, $family);
+	padding: 5px 10px;
+	cursor: pointer;
+	color: #FFF;
+	background-color: $primarycolor;
+	@include trs(0.250s);
+
+	&:hover {
+		color: $primarycolor;
+		background-color: #FFF;
+	}
+}
+.fx-menu {
+	background: #47a3da;
+	position: fixed;
+}
+
+/* Push classes applied to the body */
+.fx-menu-push {
+	position: relative;
+}
+.fx-menu-push-toright {
+	left: $width-push	;
+}
+.cbp-spmenu-push-toleft {
+	right: -$width-push	;
+}
+
+/* Transitions */
+.fx-menu, .fx-menu-push {
+	@include trs(all 0.5s cubic-bezier(0.6,0,0.4,1));
+/* -webkit-transition: all .4s cubic-bezier(0, 1.8, 1, 1.8);
+	  -moz-transition: all .4s cubic-bezier(0, 1.8, 1, 1.8);
+	  -o-transition: all .4s cubic-bezier(0, 1.8, 1, 1.8);
+	  transition: all .4s cubic-bezier(0, 1.5, 1, 1);*/
+}
+.fx-menu-left {
+	left: -$width-push;
+}
+.fx-menu-right {
+	right: -$width-push	;
+}
+.fx-menu-push-toright {
+	left: $width-push	 !important;
+	right: auto !important;
+}
+.fx-menu-push-toleft {
+	right: $width-push	 !important;
+	left: auto !important;
+}
+.fx-menu-left.fx-menu-open {
+	left: 0px;
+}
+.fx-menu-right.fx-menu-open {
+	right: 0px;
+}
+
+.fleft{
+	float: left;
+}
+
+.fright{
+	float: right;
+}

@@ -1,0 +1,11 @@
+/* MEDIAQUERY 480PX
+*********************************************************************/
+@media all and (min-width: 480px) {
+
+	@import "480/header";
+	@import "480/footer";
+	@import "480/general";
+	@import "480/page_home";
+	@import "480/page_my_routine";	
+	@import "480/page_new_routine";		
+}

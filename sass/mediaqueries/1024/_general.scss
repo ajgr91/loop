@@ -1,0 +1,12 @@
+.grid-sizer{
+  width: 25%;
+}
+.hq1{
+  width: calc(100% - #{2*$margin-grid});
+}
+.hq2{
+  width: calc(50% - #{2*$margin-grid});
+}
+.hq4{
+  width: calc(25% - #{2*$margin-grid});
+}
