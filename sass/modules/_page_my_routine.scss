@@ -1,0 +1,278 @@
+.days-routine-list {
+	margin: 3px 2px;
+
+	.day-routine-item {
+		position: relative;
+
+		.top-bar {
+			cursor: pointer;
+			margin-top: 5px;
+			background-color: #111;
+			height: 25px;
+
+			.day-name {
+				background-color: $secondarycolor;
+				position: absolute;
+				text-transform: uppercase;
+				color: $blanco;
+				@include font($style, $os_medium, 15, $family);
+				padding: 4px 12px;
+				height: 25px;
+				width: 100px;
+
+				&.top.left {
+					&:after {
+						content: "";
+						display: block;
+						position: absolute;
+						right: -12px;
+						top: 0;
+						border-top: 25px solid $secondarycolor;
+						border-right: 12px inset $transparent;
+					}
+				}
+			}
+			.day-title {
+				color: $blanco;
+				@include font($style, $os_light, 15, $family);
+				padding: 4px 12px;
+				height: 25px;
+				text-align: center;
+				display: block;
+			}
+			.icon-expand {
+				height: 25px;
+				width: 25px;
+				position: absolute;
+
+				.line {
+					background-color: $blanco;
+					height: 2px;
+					width: 10px;
+					display: block;
+					position: absolute;
+					top: 0;
+					bottom: 0;
+					left: 0;
+					right: 0;
+					margin: auto;
+					@include trs(all 0.250s ease-in-out);
+				}
+				.line:last-of-type {
+					@include trf(rotate(90deg));
+				}
+			}
+			&.open {
+				.icon-expand {
+					.line:last-of-type {
+						@include trf(rotate(0deg));
+					}
+				}
+			}
+		}
+		.exercise-list {
+			@include trs(all 0.75s ease-in-out);
+			@include opacity(0);
+			max-height: 0px;
+			overflow: hidden;
+
+			&.open {
+				@include opacity(1);
+				max-height: 2000px;
+				margin-bottom: 35px;
+			}
+			.btn {
+			    background-color: $secondarycolor;
+			    float: right;
+			    cursor: pointer;
+			    margin-left: 7px;
+			    margin-top: 5px;
+			    width: 100%;
+  				text-align: center;
+			    span{
+			      text-transform: uppercase;
+			      color: $blanco;
+			      @include font($style, $os_medium, 15, $family);
+			      padding: 5px 10px;
+			      float: left;
+			      width: 100%;
+			      @include trs(0.250s);
+			    }
+
+			    &:hover{
+			       & span {
+			        background-color: $primarycolor;
+			        color: #FFF;
+			      }
+			    }
+		    }
+		}
+		.exercise-item {
+			position: relative;
+			margin-top: 5px;
+
+			.exercise-title {
+				background-color: #111;
+				color: $blanco;
+				@include font(italic, $os_bold, 20, $family);
+				padding: 13px 12px;
+				height: 50px;
+				text-align: left;
+				display: block;
+				width: 100%;
+				text-transform: uppercase;
+				padding-left: 14px;
+			}
+			.series-item {
+				background-color: #EEE;
+				height: 40px;
+				margin-top: 5px;
+
+				.serie-name {
+					color: #111;
+					@include font($style, $os_medium, 15, $family);
+					text-transform: uppercase;
+					padding: 12px 10px;
+					display: block;
+					float: left;
+					height: 40px;
+				}
+				.serie-reps {
+					background-color: #222;
+					width: 55px;
+					padding: 9px 0px;
+					display: block;
+					float: right;
+					height: 40px;
+					position: relative;
+					color: #FFF;
+					text-align: center;
+					text-transform: uppercase;
+					//margin-left: 19px;
+					@include font($style, $os_medium, 18, $family);
+
+					&:after {
+						content: "";
+						display: block;
+						position: absolute;
+						right: -10px;
+						top: 0;
+						border-top: 40px solid #222;
+						border-right: 10px inset $transparent;
+					}
+					&:before {
+						content: "";
+						display: block;
+						position: absolute;
+						left: -10px;
+						top: 0;
+						border-bottom: 40px solid #222;
+						border-left: 10px inset $transparent;
+					}
+				}
+				.serie-weight {
+					background-color: #444;
+					width: 55px;
+					padding: 9px 0px;
+					display: block;
+					float: right;
+					height: 40px;
+					position: relative;
+					color: #FFF;
+					text-align: center;
+					text-transform: uppercase;
+					margin-left: 9px;
+					@include font($style, $os_medium, 18, $family);
+
+					&:after {
+						content: "";
+						display: block;
+						position: absolute;
+						right: -10px;
+						top: 0;
+						border-top: 40px solid #444;
+						border-right: 10px inset $transparent;
+					}
+					&:before {
+						content: "";
+						display: block;
+						position: absolute;
+						left: -10px;
+						top: 0;
+						border-bottom: 40px solid #444;
+						border-left: 10px inset $transparent;
+					}
+				}
+				.serie-reps-input {
+					background-color: #111;
+					width: 55px;
+					padding: 0px 9px;
+					display: block;
+					float: right;
+					height: 40px;
+					position: relative;
+					margin-left: 9px;
+
+					input[name="serie-reps"] {
+						color: #FFF;
+						background: $transparent;
+						@include font($style, $os_medium, 28, $family);
+						text-transform: uppercase;
+						text-align: center;
+						width: 100%;
+						height: 36px;
+						border-bottom: #4D4D4D 1px solid;
+					}
+					&:after {
+						content: "";
+						display: block;
+						position: absolute;
+						right: -10px;
+						top: 0;
+						border-top: 40px solid #111;
+						border-right: 10px inset $transparent;
+					}
+					&:before {
+						content: "";
+						display: block;
+						position: absolute;
+						left: -10px;
+						top: 0;
+						border-bottom: 40px solid #111;
+						border-left: 10px inset $transparent;
+					}
+				}
+				.serie-weight-input {
+					background-color: #111;
+					width: 65px;
+					padding: 0px 9px;
+					display: block;
+					float: right;
+					height: 40px;
+					position: relative;
+					margin-left: 9px;
+
+					input[name="serie-weight"] {
+						color: #FFF;
+						background: $transparent;
+						@include font($style, $os_medium, 28, $family);
+						text-transform: uppercase;
+						text-align: center;
+						width: 100%;
+						height: 36px;
+						border-bottom: #4D4D4D 1px solid;
+					}
+					&:before {
+						content: "";
+						display: block;
+						position: absolute;
+						left: -10px;
+						top: 0;
+						border-bottom: 40px solid #111;
+						border-left: 10px inset $transparent;
+					}
+				}
+			}
+		}
+	}
+}

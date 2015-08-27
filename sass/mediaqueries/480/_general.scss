@@ -1,0 +1,25 @@
+.grid {
+	[data-widget="graph-weight"] {
+		.dates {
+			.from-date, .to-date {
+				width: 49%!important;
+			}
+			.from-date {
+				float: left;
+			}
+			.to-date {
+				float: right;
+			}
+		}
+	}
+	[data-widget="workout"] {
+		.titles {
+			h1 {
+				@include font($style, $os_medium, 55, $family);
+			}
+		}
+	}
+}
+.lw2 {
+	width:calc(50% - #{2*$margin-grid});
+}

@@ -1,0 +1,175 @@
+.days-routine-list {
+	.day-routine-item {
+		.exercise-list {
+			.btn {
+			    width: auto;
+  				text-align: center;
+  				span{
+  					width: auto;
+  				}
+  			}
+  		}
+		.exercise-item {
+			width: calc(50% - 2.5px);
+			&:nth-child(even){
+				float: left;
+			}
+			&:nth-child(odd){
+				float: right;
+			}
+			.exercise-title {
+				padding-left: 14px;
+			}
+			.series-item {
+				background-color: #EEE;
+				height: 40px;
+				margin-top: 5px;
+
+				.serie-name {
+					color: #111;
+					@include font($style, $os_medium, 18, $family);
+					text-transform: uppercase;
+					padding: 9px 10px;
+					display: block;
+					float: left;
+					height: 40px;
+				}
+				.serie-reps {
+					background-color: #222;
+					width: 55px;
+					padding: 9px 0px;
+					display: block;
+					float: right;
+					height: 40px;
+					position: relative;
+					color: #FFF;
+					text-align: center;
+					text-transform: uppercase;
+					//margin-left: 19px;
+					@include font($style, $os_medium, 18, $family);
+
+					&:after {
+						content: "";
+						display: block;
+						position: absolute;
+						right: -10px;
+						top: 0;
+						border-top: 40px solid #222;
+						border-right: 10px inset $transparent;
+					}
+					&:before {
+						content: "";
+						display: block;
+						position: absolute;
+						left: -10px;
+						top: 0;
+						border-bottom: 40px solid #222;
+						border-left: 10px inset $transparent;
+					}
+				}
+				.serie-weight {
+					background-color: #444;
+					width: 55px;
+					padding: 9px 0px;
+					display: block;
+					float: right;
+					height: 40px;
+					position: relative;
+					color: #FFF;
+					text-align: center;
+					text-transform: uppercase;
+					margin-left: 9px;
+					@include font($style, $os_medium, 18, $family);
+
+					&:after {
+						content: "";
+						display: block;
+						position: absolute;
+						right: -10px;
+						top: 0;
+						border-top: 40px solid #444;
+						border-right: 10px inset $transparent;
+					}
+					&:before {
+						content: "";
+						display: block;
+						position: absolute;
+						left: -10px;
+						top: 0;
+						border-bottom: 40px solid #444;
+						border-left: 10px inset $transparent;
+					}
+				}
+				.serie-reps-input {
+					background-color: #111;
+					width: 55px;
+					padding: 0px 9px;
+					display: block;
+					float: right;
+					height: 40px;
+					position: relative;
+					margin-left: 9px;
+
+					input[name="serie-reps"] {
+						color: #FFF;
+						background: $transparent;
+						@include font($style, $os_medium, 28, $family);
+						text-transform: uppercase;
+						text-align: center;
+						width: 100%;
+						height: 36px;
+						border-bottom: #4D4D4D 1px solid;
+					}
+					&:after {
+						content: "";
+						display: block;
+						position: absolute;
+						right: -10px;
+						top: 0;
+						border-top: 40px solid #111;
+						border-right: 10px inset $transparent;
+					}
+					&:before {
+						content: "";
+						display: block;
+						position: absolute;
+						left: -10px;
+						top: 0;
+						border-bottom: 40px solid #111;
+						border-left: 10px inset $transparent;
+					}
+				}
+				.serie-weight-input {
+					background-color: #111;
+					width: 65px;
+					padding: 0px 9px;
+					display: block;
+					float: right;
+					height: 40px;
+					position: relative;
+					margin-left: 9px;
+
+					input[name="serie-weight"] {
+						color: #FFF;
+						background: $transparent;
+						@include font($style, $os_medium, 28, $family);
+						text-transform: uppercase;
+						text-align: center;
+						width: 100%;
+						height: 36px;
+						border-bottom: #4D4D4D 1px solid;
+					}
+					&:before {
+						content: "";
+						display: block;
+						position: absolute;
+						left: -10px;
+						top: 0;
+						border-bottom: 40px solid #111;
+						border-left: 10px inset $transparent;
+					}
+				}
+			}
+		}
+	}
+}

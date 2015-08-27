@@ -1,0 +1,10 @@
+/* MEDIAQUERY 900PX
+*********************************************************************/
+@media all and (min-width: 1600px) {
+
+	@import "1600/header";
+	@import "1600/footer";
+	@import "1600/page_home";
+	@import "1600/page_my_routine";	
+	@import "1600/page_new_routine";	
+}

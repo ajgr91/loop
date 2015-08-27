@@ -1,0 +1,292 @@
+.page-info {
+	.save-btn {
+		float: left;
+	}
+	.routine-name {
+		margin-top: 0px;
+		float: right;
+
+		&:before {
+			content: '';
+			display: block;
+			clear: both;
+		}
+		.name {
+			background-color: $secondarycolor;
+			text-transform: uppercase;
+			color: $blanco;
+			@include font($style, $os_medium, 15, $family);
+			display: block;
+			padding: 5px 30px;
+			float: left;
+			width: auto;
+		}
+		.routine-name-input {
+			background-color: $primarycolor;
+			display: block;
+			float: right;
+			position: relative;
+			padding: 4px 30px;
+			width: 250px;
+			height: 28px;
+
+			input[name="routine-name"] {
+				color: #FFF;
+				background: $transparent;
+				@include font($style, $os_light, 15, $family);
+				text-align: center;
+				width: 100%;
+				border-bottom: #4D4D4D 1px solid;
+			}
+		}
+	}
+}
+.menu-routine-days {
+	padding: 2.5px;
+
+	ul {
+		@include flexbox();
+		@include flex-direction(row);
+		li {
+			@include flex(1);
+			background-color: $primarycolor;
+			text-transform: uppercase;
+			color: $blanco;
+			@include font($style, $os_medium, 15, $family);
+			position: relative;
+			text-align: center;
+			padding: 5px 5px;
+			margin-bottom: 2px;
+			cursor: pointer;
+
+			&.active:after {
+				background-color: $secondarycolor;
+				height: 4px;
+				bottom: 0px;
+				position: absolute;
+				content: '';
+				width: 100px;
+				margin: auto;
+				left: 0;
+				right: 0;
+			}
+		}
+	}
+}
+.exercise-routine-day {
+	padding: 2.5px;
+	float: left;
+	width: calc(50% - 5px);
+	.routine-day-name {
+		overflow: hidden;
+
+		.name {
+			background-color: $primarycolor;
+			text-transform: uppercase;
+			color: $blanco;
+			@include font($style, $os_medium, 15, $family);
+			display: block;
+			padding: 5px 8px 5px 30px;
+			float: left;
+			width: 95px;
+		}
+		.routine-name-input {
+			background-color: $primarycolor;
+			display: block;
+			float: right;
+			position: relative;
+			padding: 4px 30px 4px 0px;
+			width: calc(100% - 95px);
+			height: 28px;
+
+			input[name="routine-name"] {
+				color: #FFF;
+				background: $transparent;
+				@include font($style, $os_light, 15, $family);
+				text-align: center;
+				width: 100%;
+				border-bottom: #4D4D4D 1px solid;
+			}
+		}
+	}
+	.exercise-item {
+		background-color: #EEE;
+		height: 40px;
+		margin-top: 5px;
+
+		.exercise-name {
+			color: #111;
+			@include font($style, $os_medium, 15, $family);
+			text-transform: uppercase;
+			padding: 12px 10px;
+			display: block;
+			float: left;
+			height: 40px;
+		}
+		.exercise-series {
+			background-color: #222;
+			width: 100px;
+			padding: 9px 0px;
+			display: block;
+			float: right;
+			height: 40px;
+			position: relative;
+			color: #FFF;
+			text-align: center;
+			text-transform: uppercase;
+			//margin-left: 19px;
+			@include font($style, $os_medium, 18, $family);
+
+			&:after {
+				content: "";
+				display: block;
+				position: absolute;
+				right: -10px;
+				top: 0;
+				border-top: 40px solid #222;
+				border-right: 10px inset $transparent;
+			}
+			&:before {
+				content: "";
+				display: block;
+				position: absolute;
+				left: -10px;
+				top: 0;
+				border-bottom: 40px solid #222;
+				border-left: 10px inset $transparent;
+			}
+		}
+		.exercise-series-input {
+			background-color: #111;
+			width: 55px;
+			padding: 0px 9px;
+			display: block;
+			float: right;
+			height: 40px;
+			position: relative;
+			margin-left: 9px;
+
+			input[name="exercise-series"] {
+				color: #FFF;
+				background: $transparent;
+				@include font($style, $os_medium, 28, $family);
+				text-transform: uppercase;
+				text-align: center;
+				width: 100%;
+				height: 36px;
+				border-bottom: #4D4D4D 1px solid;
+			}
+			&:before {
+				content: "";
+				display: block;
+				position: absolute;
+				left: -10px;
+				top: 0;
+				border-bottom: 40px solid #111;
+				border-left: 10px inset $transparent;
+			}
+		}
+	}
+}
+.exercise-selector-wrapper {
+	margin: 2.5px;
+	background-color: #EEE;
+	float: right;
+	width: calc(50% - 5px);
+	.title {
+		background-color: $primarycolor;
+		text-transform: uppercase;
+		color: $blanco;
+		@include font($style, $os_medium, 15, $family);
+		display: block;
+		padding: 5px 30px;
+	}
+	.exercise-search {
+		margin: 5px;
+		background-color: $blanco;
+		display: block;
+		position: relative;
+		padding: 4px 10px 4px 10px;
+		height: 28px;
+
+		input[name="exercise-search"] {
+			padding-left: 15px;
+			color: #777;
+			background: $transparent;
+			@include font($style, $os_light, 15, $family);
+			text-align: left;
+			width: 100%;
+			border-bottom: #DDD 1px solid;
+		}
+		i {
+			position: absolute;
+			right: 15px;
+			top: 5px;
+			color: #777;
+		}
+		::-webkit-input-placeholder {
+			color: #777;
+		}
+		:-moz-placeholder {
+			color: #777;
+			opacity: 1;
+		}
+		::-moz-placeholder {
+			color: #777;
+			opacity: 1;
+		}
+		:-ms-input-placeholder {
+			color: #777;
+		}
+	}
+	.exercise-list {
+		margin: 5px 5px 0px 5px;
+		overflow: hidden;
+		max-height: 275px;
+		overflow-y: visible;
+		.exercise-list-item {
+			background-color: $primarycolor;
+			position: relative;
+			margin-bottom: 5px;
+			overflow: hidden;
+			cursor: pointer;
+
+			.add-button {
+				font: normal $os_bold rem(25) $primarytxt;
+				color: #FFF;
+				font-weight: 500;
+				width: 50px;
+				border: 2px #FFF solid;
+				float: left;
+				height: 50px;
+				text-align: center;
+				background: transparent;
+				@include flexbox();
+				@include flex-align(center);
+				@include flex-direction(column);
+				@include trs(all 0.250s ease-in-out);
+			}
+			.title {
+				@include font($style, $os_bold, 13, $family);
+				color: $primarycolor;
+				background-color: $blanco;
+				text-transform: uppercase;
+				text-align: left;
+				width: calc(100% - 50px);
+				float: left;
+				padding: 10px 5px;
+				height: 50px;
+				display: block;
+				@include flexbox();
+				@include flex-align(center);
+				@include flex-direction(column);
+			}
+			&:hover {
+				.add-button {
+					color: $primarycolor;
+					background-color: $blanco;
+				}
+			}
+		}
+	}
+}

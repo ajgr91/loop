@@ -1,0 +1,11 @@
+/* MEDIAQUERY 900PX
+*********************************************************************/
+@media all and (min-width: 1024px) {
+
+	@import "1024/header";
+	@import "1024/footer";
+	@import "1024/general";
+	@import "1024/page_home";
+	@import "1024/page_my_routine";
+	@import "1024/page_new_routine";	
+}
